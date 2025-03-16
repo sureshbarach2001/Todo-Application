@@ -76,7 +76,7 @@ to-do-list/
 
 ## 🎥 Demo Video
 Check out the To-Do List in action!  
-![To-Do List Demo](./assets/Demo.webm)
+[To-Do List Demo](https://github.com/sureshbarach2001/Todo-Application/blob/43a911cf6a3ff876f888329d1bc0109ad1536ce1/assests/Demo.webm)
 
 ---
 
