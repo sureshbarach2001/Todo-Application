@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To Do List</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Add Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="app-wrapper">
+    <header>
+      <h1>To Do List</h1>
+    </header>
+    <main>
+      <section class="task-input">
+        <input type="text" id="taskInput" placeholder="What's your next task?">
+        <select id="prioritySelect">
+          <option value="high">high</option>
+          <option value="medium">medium</option>
+          <option value="low">low</option>
+        </select>
+        <button id="addTaskBtn">Add Task</button>
+      </section>
+
+      <section class="search-section">
+        <input type="text" id="searchInput" placeholder="Search tasks...">
+        <select id="priorityFilter">
+          <option value="all">All Priorities</option>
+          <option value="high">high</option>
+          <option value="medium">medium</option>
+          <option value="low">low</option>
+        </select>
+      </section>
+
+      <section class="task-section">
+        <h2>Pending Tasks</h2>
+        <div class="pending-tasks">
+          <div class="priority-group" id="highTasks">
+            <h3>high</h3>
+            <div class="tasks"></div>
+          </div>
+          <div class="priority-group" id="mediumTasks">
+            <h3>medium</h3>
+            <div class="tasks"></div>
+          </div>
+          <div class="priority-group" id="lowTasks">
+            <h3>low</h3>
+            <div class="tasks"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="task-section">
+        <h2>Completed Tasks</h2>
+        <div id="completedList" class="tasks"></div>
+      </section>
+    </main>
+    <footer>
+      <p>Total Pending Tasks: <span id="taskCount">0</span></p>
+    </footer>
+  </div>
+  <button id="darkModeToggle" class="dark-mode-toggle">☀️</button>
+
+  <!-- Edit Modal -->
+  <div class="modal-overlay" id="edit-modal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Edit Task</h3>
+        <button class="close-btn">×</button>
+      </div>
+      <div class="modal-body">
+        <form id="edit-form">
+          <input type="text" id="edit-input" class="modal-input" placeholder="Edit your task">
+          <select id="edit-priority" class="modal-input">
+            <option value="high">high</option>
+            <option value="medium">medium</option>
+            <option value="low">low</option>
+          </select>
+          <div class="modal-actions">
+            <button type="button" class="cancel-btn">Cancel</button>
+            <button type="submit" class="save-btn">Save Changes</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
